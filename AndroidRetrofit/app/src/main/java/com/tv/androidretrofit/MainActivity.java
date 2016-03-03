@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -47,8 +48,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     }
     private void create(){
-        //While the app fetched data we are displaying a progress dialog
-
 
         //Creating a rest adapter
         RestAdapter adapter = new RestAdapter.Builder()
@@ -78,6 +77,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.callBtn:
+                hideSoftKeyboard();
                 if(!(codeET.getText().toString().trim().equalsIgnoreCase("")) && (!phoneET.getText().toString().trim().equalsIgnoreCase("")) && codeET.getText().toString().trim().length()==3)
                 {
                     if (NetworkAvailablity.checkNetworkStatus(MainActivity.this)) {
@@ -118,4 +118,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         }
     }
+    public void hideSoftKeyboard() {
+        if(getCurrentFocus()!=null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0); } }
 }
