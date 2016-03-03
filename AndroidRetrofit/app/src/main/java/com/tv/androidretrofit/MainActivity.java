@@ -78,7 +78,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.callBtn:
-                if(!(codeET.getText().toString().trim().equalsIgnoreCase("")) && (!phoneET.getText().toString().trim().equalsIgnoreCase("")))
+                if(!(codeET.getText().toString().trim().equalsIgnoreCase("")) && (!phoneET.getText().toString().trim().equalsIgnoreCase("")) && codeET.getText().toString().trim().length()==3)
                 {
                     if (NetworkAvailablity.checkNetworkStatus(MainActivity.this)) {
                         new TestAsync().execute();
@@ -91,7 +91,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Please enter all the details.",Toast.LENGTH_LONG).show();
+                    responseTV.setText("PIN :");
+                    Toast.makeText(MainActivity.this,"Please enter valid details.",Toast.LENGTH_LONG).show();
                 }
                 break;
         }
