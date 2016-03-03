@@ -1,7 +1,7 @@
 package com.tv.androidretrofit;
 
 
-import retrofit.Callback;
+
 import retrofit.http.Body;
 import retrofit.http.POST;
 

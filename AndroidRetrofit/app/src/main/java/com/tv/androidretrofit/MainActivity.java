@@ -2,12 +2,7 @@ package com.tv.androidretrofit;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
 import retrofit.RestAdapter;
-
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -17,10 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends Activity implements View.OnClickListener {
     public static final String BASE_URL = "http://bebetrack.com/";
