@@ -18,6 +18,7 @@
         android:maxLength="11"
         android:digits="0123456789"
         android:id="@+id/phoneET"
+        android:imeOptions="actionNext"
         android:inputType="phone"
         android:layout_height="wrap_content" />
     <EditText
