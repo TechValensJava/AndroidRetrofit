@@ -5,26 +5,12 @@ package com.tv.androidretrofit;
  */
 public class RequestBean {
     private String phone;
-   private  String code;
+   private  String internationalCode;
 
-    public String getCode() {
-        return code;
-    }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
+    public RequestBean(String phone, String internationalCode) {
         this.phone = phone;
-    }
-
-    public RequestBean(String phone, String code) {
-        this.phone = phone;
-        this.code = code;
+        this.internationalCode = internationalCode;
     }
 }
