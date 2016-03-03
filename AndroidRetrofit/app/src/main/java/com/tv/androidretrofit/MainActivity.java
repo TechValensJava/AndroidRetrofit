@@ -49,7 +49,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         AuthenticationAPI api = adapter.create(AuthenticationAPI.class);
 
         //Defining the method
-          data= api.create(new RequestBean(phoneET.getText().toString().trim(),codeET.getText().toString()));
+          data= api.create(new RequestBean(Integer.parseInt(phoneET.getText().toString().trim()),Integer.parseInt(codeET.getText().toString())));
         System.out.println("REPSONSE"+data.getToken()+data.getPin());
         SharedPreferences.Editor prefEditor = _spref.edit();
         prefEditor.putString("Token", data.getToken());

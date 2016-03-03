@@ -6,7 +6,7 @@ package com.tv.androidretrofit;
 public class ResponseBean {
 
     private String token;
-    private int pin;
+    private String pin;
 
     public String getToken() {
         return token;
@@ -16,11 +16,11 @@ public class ResponseBean {
         this.token = token;
     }
 
-    public int getPin() {
+    public String getPin() {
         return pin;
     }
 
-    public void setPin(int pin) {
+    public void setPin(String pin) {
         this.pin = pin;
     }
 }

@@ -4,12 +4,12 @@ package com.tv.androidretrofit;
  * Created by anjali on 3/3/16.
  */
 public class RequestBean {
-    private String phone;
-   private  String internationalCode;
+    private int phone;
+   private  int internationalCode;
 
 
 
-    public RequestBean(String phone, String internationalCode) {
+    public RequestBean(int phone, int internationalCode) {
         this.phone = phone;
         this.internationalCode = internationalCode;
     }
